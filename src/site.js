@@ -1,10 +1,20 @@
 import React, { useRef } from "react";
 import Component from "./Component";
 import NavigationCircle from "./NavigationCircle";
+import TopBorder from "./TopBorder";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+import { black } from "./pictures/img_exporter";
 
 class Site extends React.Component {
   constructor(props) {
     super(props);
+
+    this.theme = createMuiTheme({
+      typography: {
+        fontFamily: ["EB Garamond", "serif"].join(","),
+      },
+    });
 
     //IM SO SORRY BUT MAKE SURE THAT THE NAVIGATION CIRCLE LABELS ARE THE SAME AS IN THE HANDLESCROLL IF STUFF
     this.HOME = React.createRef();
@@ -32,28 +42,33 @@ class Site extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavigationCircle
-          labels={["HOME", "PRODUCT", "VISION", "ABOUT US"]}
-          handleScrollToo={this.handleScrollToo}
-        />
-        <div ref={this.HOME}>
-          <Component
-            title="HARVESTING ELECTRICITY"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            picPath="./pictures/black.jpg"
+      <ThemeProvider theme={this.theme}>
+        <div>
+          <div ref={this.HOME}>
+            <TopBorder />
+          </div>
+          <NavigationCircle
+            labels={["HOME", "PRODUCT", "VISION", "ABOUT US"]}
+            handleScrollToo={this.handleScrollToo}
           />
+          <div>
+            <Component
+              title="HARVESTING ELECTRICITY"
+              body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              pic={black}
+            />
+          </div>
+          <div ref={this.PRODUCT}>
+            <Component
+              title="COOL PROMO PIC"
+              body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              pic={black}
+            />
+          </div>
+          <div ref={this.VISION}></div>
+          <div ref={this.ABOUT_US}></div>
         </div>
-        <div ref={this.PRODUCT}>
-          <Component
-            title="COOL PROMO PIC"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            picPath="./pictures/black.jpg"
-          />
-        </div>
-        <div ref={this.VISION}></div>
-        <div ref={this.ABOUT_US}></div>
-      </div>
+      </ThemeProvider>
     );
   }
 }

@@ -1,10 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import photo from "./pictures/black.jpg";
 
 function Component(props) {
   return (
-    <div className="Component" style={{ backgroundImage: `url(${photo})` }}>
+    <div className="Component" style={{ backgroundImage: `url(${props.pic})` }}>
       <Grid
         container
         direction="row"

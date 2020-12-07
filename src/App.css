@@ -6,6 +6,20 @@
 .App {
   text-align: center;
   background-color: var(--main);
+  font-family: "EB Garamond", serif;
+}
+
+.top_border {
+  height: 166px;
+  width: 100%;
+}
+
+.top_border_grid_item {
+  height: 100%;
+}
+
+.company_logo {
+  height: 100%;
 }
 
 .Component {
@@ -22,13 +36,13 @@
 }
 
 .circle {
-  width:120px;
+  width: 120px;
   height: 120px;
   line-height: 500px;
   border-radius: 50%;
   color: var(--main);
   text-align: center;
-  background:var(--secondary);
+  background: var(--secondary);
   position: fixed;
   top: 1em;
   right: 1em;
