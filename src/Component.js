@@ -4,10 +4,7 @@ import photo from "./pictures/black.jpg";
 
 function Component(props) {
   return (
-    <div
-      className="Component"
-      style={{ backgroundImage: `url(${photo})` }}
-    >
+    <div className="Component" style={{ backgroundImage: `url(${photo})` }}>
       <Grid
         container
         direction="row"

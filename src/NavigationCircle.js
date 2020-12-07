@@ -1,7 +1,8 @@
 import React from "react";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid, Link } from "@material-ui/core";
 
 function NavigationCircle(props) {
+  console.log(props.labels);
   return (
     <div class="circle">
       <Grid
@@ -11,18 +12,18 @@ function NavigationCircle(props) {
         alignItems="center"
         className="Box_in_circle"
       >
-        <Grid item>
-          <Typography>HOME</Typography>
-        </Grid>
-        <Grid item>
-          <Typography>PRODUCT</Typography>
-        </Grid>
-        <Grid item>
-          <Typography>VISION</Typography>
-        </Grid>
-        <Grid item>
-          <Typography>ABOUT US</Typography>
-        </Grid>
+        {props.labels.map((label, index) => (
+          <Grid item key={index}>
+            <Typography>
+              <Link
+                color="inherit"
+                onClick={() => props.handleScrollToo(label)}
+              >
+                {label}
+              </Link>
+            </Typography>
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
