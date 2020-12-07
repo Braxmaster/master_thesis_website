@@ -10,9 +10,14 @@ class Site extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      labels: ["HOME", "PRODUCT", "VISION", "ABOUT US"],
+      inView: [false, false, false, false],
+    };
+
     this.theme = createMuiTheme({
       typography: {
-        fontFamily: ["EB Garamond", "serif"].join(","),
+        fontFamily: ["Merriweather", "serif"].join(","),
       },
     });
 
@@ -23,6 +28,8 @@ class Site extends React.Component {
     this.ABOUT_US = React.createRef();
 
     this.handleScrollToo = this.handleScrollToo.bind(this);
+    this.isInViewport = this.isInViewport.bind(this);
+    this.handleScrollToElement = this.handleScrollToElement.bind(this);
   }
 
   // THIS IS TERRIBLE, FORGIVE ME
@@ -40,15 +47,45 @@ class Site extends React.Component {
     scroll_to.current.scrollIntoView({ behavior: "smooth" });
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScrollToElement);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScrollToElement);
+  }
+
+  handleScrollToElement(event) {
+    if (this.isInViewport(0, this.PRODUCT)) {
+      this.setState({ inView: [false, true, false, false] });
+    }
+    if (this.isInViewport(0, this.HOME)) {
+      this.setState({ inView: [true, false, false, false] });
+    }
+    if (this.isInViewport(0, this.VISION)) {
+      this.setState({ inView: [true, false, true, false] });
+    }
+    if (this.isInViewport(0, this.ABOUT_US)) {
+      this.setState({ inView: [true, false, false, true] });
+    }
+  }
+
+  isInViewport(offset = 0, ref) {
+    if (!ref) return false;
+    const top = ref.current.getBoundingClientRect().top;
+    return top + offset >= 0 && top - offset <= window.innerHeight;
+  }
+
   render() {
     return (
       <ThemeProvider theme={this.theme}>
-        <div>
+        <div onScroll={() => console.log("Scrolling")}>
           <div ref={this.HOME}>
             <TopBorder />
           </div>
           <NavigationCircle
-            labels={["HOME", "PRODUCT", "VISION", "ABOUT US"]}
+            labels={this.state.labels}
+            bold={this.state.inView}
             handleScrollToo={this.handleScrollToo}
           />
           <div>

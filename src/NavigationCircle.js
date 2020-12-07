@@ -14,9 +14,11 @@ function NavigationCircle(props) {
       >
         {props.labels.map((label, index) => (
           <Grid item key={index}>
-            <Typography>
+            <Typography variant="body2">
               <Link
+                underline={props.bold[index] ? "always" : "node"}
                 color="inherit"
+                className="nav_item_in_circle"
                 onClick={() => props.handleScrollToo(label)}
               >
                 {label}
