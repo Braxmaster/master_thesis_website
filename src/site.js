@@ -4,7 +4,7 @@ import NavigationCircle from "./NavigationCircle";
 import TopBorder from "./TopBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
-import { black } from "./pictures/img_exporter";
+import { black, white } from "./pictures/img_exporter";
 
 class Site extends React.Component {
   constructor(props) {
@@ -55,7 +55,9 @@ class Site extends React.Component {
             <Component
               title="HARVESTING ELECTRICITY"
               body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              pic={black}
+              pic={white}
+              textClass="Component_text_black"
+              align="left"
             />
           </div>
           <div ref={this.PRODUCT}>
@@ -63,6 +65,8 @@ class Site extends React.Component {
               title="COOL PROMO PIC"
               body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               pic={black}
+              textClass="Component_text_white"
+              align="right"
             />
           </div>
           <div ref={this.VISION}></div>

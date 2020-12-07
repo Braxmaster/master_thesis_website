@@ -12,6 +12,7 @@
 .top_border {
   height: 166px;
   width: 100%;
+  background-color: var(--main);
 }
 
 .top_border_grid_item {
@@ -31,8 +32,12 @@
   height: 100%;
 }
 
-.Component_text {
+.Component_text_white {
   color: var(--main);
+}
+
+.Component_text_black {
+  color: var(--secondary);
 }
 
 .circle {
