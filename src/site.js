@@ -2,9 +2,10 @@ import React, { useRef } from "react";
 import Component from "./Component";
 import NavigationCircle from "./NavigationCircle";
 import TopBorder from "./TopBorder";
+import ThreePicturesComponent from "./ThreePicturesComponent";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
-import { black, white } from "./pictures/img_exporter";
+import { black, white, PLACEHOLDER_SVG } from "./pictures/img_exporter";
 
 class Site extends React.Component {
   constructor(props) {
@@ -63,7 +64,7 @@ class Site extends React.Component {
       this.setState({ inView: [true, false, false, false] });
     }
     if (this.isInViewport(0, this.VISION)) {
-      this.setState({ inView: [true, false, true, false] });
+      this.setState({ inView: [false, false, true, false] });
     }
     if (this.isInViewport(0, this.ABOUT_US)) {
       this.setState({ inView: [true, false, false, true] });
@@ -107,6 +108,11 @@ class Site extends React.Component {
             />
           </div>
           <div ref={this.VISION}></div>
+          <ThreePicturesComponent
+            PicOne={PLACEHOLDER_SVG}
+            PicTwo={PLACEHOLDER_SVG}
+            PicThree={PLACEHOLDER_SVG}
+          />
           <div ref={this.ABOUT_US}></div>
         </div>
       </ThemeProvider>
