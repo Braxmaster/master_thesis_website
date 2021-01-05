@@ -15,12 +15,8 @@
   background-color: var(--main);
 }
 
-.top_border_grid_item {
-  height: 100%;
-}
-
-.company_logo {
-  height: 100%;
+.Bottom_border {
+  height: 166px;
 }
 
 .Component {
@@ -29,6 +25,10 @@
 }
 
 .Component_grid {
+  height: 100%;
+}
+
+.Component_text_box {
   height: 100%;
 }
 

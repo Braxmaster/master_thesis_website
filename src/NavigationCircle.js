@@ -2,7 +2,6 @@ import React from "react";
 import { Typography, Grid, Link } from "@material-ui/core";
 
 function NavigationCircle(props) {
-  console.log(props.labels);
   return (
     <div class="circle">
       <Grid

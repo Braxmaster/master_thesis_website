@@ -3,7 +3,7 @@ import { Grid, Typography } from "@material-ui/core";
 
 function BottomBorder(props) {
   return (
-    <div>
+    <div className="Bottom_border">
       <Grid
         container
         direction="row"

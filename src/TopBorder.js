@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import logo from "./pictures/place_holder_logo.svg";
 
 function TopBorder(props) {
   return (
@@ -8,12 +7,14 @@ function TopBorder(props) {
       <Grid
         container
         direction="row"
-        justify="flex-start"
+        justify="center"
+        alignItems="center"
         className="top_border"
       >
-        <Grid item className="top_border_grid_item" alignContent="flex-start">
-          <img className="company_logo" src={logo} alt="Company logo" />
+        <Grid item alignContent="flex-start" justify="center">
+          <img src={props.logo} alt="Company logo" />
         </Grid>
+        <Grid item xs={10}></Grid>
       </Grid>
     </div>
   );

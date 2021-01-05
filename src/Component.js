@@ -12,15 +12,34 @@ function Component(props) {
         alignItems="center"
         className="Component_grid"
       >
-        <Grid item xs={4}>
-          <Grid item>
-            <Typography variant="h4" align="left" className={props.textClass}>
-              {props.title}
-            </Typography>
-            <Typography align="left" className={props.textClass}>
-              {props.body}
-            </Typography>
-          </Grid>
+        <Grid
+          container
+          xs={4}
+          spacing={6}
+          direction="column"
+          justify="center"
+          className="Component_text_box"
+        >
+          {props.body.map(function (element, index) {
+            return (
+              <Grid item>
+                <Typography
+                  variant={props.titleVariant}
+                  align="left"
+                  className={props.textClass}
+                >
+                  {props.title[index]}
+                </Typography>
+                <Typography
+                  align="left"
+                  variant={props.bodyVariant}
+                  className={props.textClass}
+                >
+                  {element}
+                </Typography>
+              </Grid>
+            );
+          })}
         </Grid>
         <Grid item xs={6}></Grid>
       </Grid>
@@ -35,15 +54,34 @@ function Component(props) {
         className="Component_grid"
       >
         <Grid item xs={6}></Grid>
-        <Grid item xs={4}>
-          <Grid item>
-            <Typography variant="h4" align="left" className={props.textClass}>
-              {props.title}
-            </Typography>
-            <Typography align="left" className={props.textClass}>
-              {props.body}
-            </Typography>
-          </Grid>
+        <Grid
+          container
+          xs={4}
+          spacing={6}
+          direction="column"
+          justify="center"
+          className="Component_text_box"
+        >
+          {props.body.map(function (element, index) {
+            return (
+              <Grid item>
+                <Typography
+                  variant={props.titleVariant}
+                  align="left"
+                  className={props.textClass}
+                >
+                  {props.title[index]}
+                </Typography>
+                <Typography
+                  align="left"
+                  variant={props.bodyVariant}
+                  className={props.textClass}
+                >
+                  {element}
+                </Typography>
+              </Grid>
+            );
+          })}
         </Grid>
       </Grid>
     );
