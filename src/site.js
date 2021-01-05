@@ -19,7 +19,7 @@ class Site extends React.Component {
 
     this.theme = createMuiTheme({
       typography: {
-        fontFamily: ["Merriweather", "serif"].join(","),
+        fontFamily: ['Open Sans', 'sans-serif'].join(","),
       },
     });
 
@@ -85,7 +85,6 @@ class Site extends React.Component {
         <div>
           <div
             ref={this.HOME}
-            style={{ height: "20px", backgroundColor: "red" }}
           ></div>
           <TopBorder logo={logo} />
         </div>
@@ -108,7 +107,6 @@ class Site extends React.Component {
           />
           <div
             ref={this.PRODUCT}
-            style={{ height: "20px", backgroundColor: "red" }}
           ></div>
           <Component
             titleVariant="h6"
@@ -130,12 +128,10 @@ class Site extends React.Component {
 
           <div
             ref={this.VISION}
-            style={{ height: "20px", backgroundColor: "red" }}
           ></div>
           <ThreePicturesComponent PicOne={logo} PicTwo={logo} PicThree={logo} />
           <div
             ref={this.ABOUT_US}
-            style={{ height: "20px", backgroundColor: "red" }}
           ></div>
           <Component
             titleVariant="h6"

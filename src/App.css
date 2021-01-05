@@ -6,7 +6,7 @@
 .App {
   text-align: center;
   background-color: var(--main);
-  font-family: "EB Garamond", serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .top_border {
@@ -17,6 +17,12 @@
 
 .Bottom_border {
   height: 166px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bottom_border_logo {
+  width: 100%;
 }
 
 .Component {
