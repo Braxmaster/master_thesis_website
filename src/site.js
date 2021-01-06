@@ -7,6 +7,7 @@ import BottomBorder from "./BottomBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
+
 import { black, white, logo } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -139,7 +140,7 @@ class Site extends React.Component {
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["At LOOP we work for the future."]}
+              title={["At °Seebeck we work for the future."]}
               body={[
                 "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
               ]}
@@ -151,7 +152,7 @@ class Site extends React.Component {
         </div>
         <BottomBorder
           Logo={logo}
-          Text="We are currently in the last stages of prototyping and will be releasing the product soon. If you would like to recieve a notis when the PEP-device is on the market - enter your email here."
+          Text="We are currently in the last stages of prototyping and will be releasing the product soon. If you would like to recieve a notis when the PEP-device is on the market - do not hesitate to contact us."
         />
       </ThemeProvider>
     );

@@ -1,20 +1,74 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Box, Divider } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function Component(props) {
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("xs"));
+
   var output;
-  if (props.align == "left") {
+  if (isSmall) {
     output = (
       <Grid
         container
-        direction="row"
         justify="center"
         alignItems="center"
         className="Component_grid"
       >
         <Grid
+          item
+          xs={12}
+          style={{ backgroundImage: `url(${props.pic})`, height: "60vh" }}
+        ></Grid>
+        <Grid
           container
-          xs={4}
+          xs={12}
+          spacing={6}
+          direction="column"
+          justify="center"
+          className="Component_text_box"
+        >
+          {props.body.map(function (element, index) {
+            return (
+              <Grid item>
+                <Typography
+                  variant={props.titleVariant}
+                  align="left"
+                  className="Component_text_black"
+                >
+                  {props.title[index]}
+                </Typography>
+                <Typography
+                  align="left"
+                  variant={props.bodyVariant}
+                  className="Component_text_black"
+                >
+                  {element}
+                </Typography>
+              </Grid>
+            );
+          })}
+        </Grid>
+        <Grid item xs={12}>
+          <Box m={4}>
+          </Box>
+        </Grid>
+      </Grid>
+    );
+  } else if (props.align == "left") {
+    output = (
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        className="Component"
+        style={{ backgroundImage: `url(${props.pic})` }}
+      >
+        <Grid
+          container
+          xs={12}
+          sm={4}
           spacing={6}
           direction="column"
           justify="center"
@@ -41,22 +95,24 @@ function Component(props) {
             );
           })}
         </Grid>
-        <Grid item xs={6}></Grid>
+        <Grid item xs={12} sm={6}></Grid>
       </Grid>
     );
-  } else {
+  } else if (props.align == "right") {
     output = (
       <Grid
         container
         direction="row"
         justify="center"
         alignItems="center"
-        className="Component_grid"
+        className="Component"
+        style={{ backgroundImage: `url(${props.pic})` }}
       >
         <Grid item xs={6}></Grid>
         <Grid
           container
-          xs={4}
+          xs={12}
+          sm={4}
           spacing={6}
           direction="column"
           justify="center"
@@ -86,11 +142,7 @@ function Component(props) {
       </Grid>
     );
   }
-  return (
-    <div className="Component" style={{ backgroundImage: `url(${props.pic})` }}>
-      {output}
-    </div>
-  );
+  return <div>{output}</div>;
 }
 
 export default Component;
