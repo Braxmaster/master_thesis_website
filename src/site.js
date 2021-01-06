@@ -5,6 +5,7 @@ import TopBorder from "./TopBorder";
 import ThreePicturesComponent from "./ThreePicturesComponent";
 import BottomBorder from "./BottomBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import Fade from "react-reveal/Fade";
 
 import { black, white, logo } from "./pictures/img_exporter";
 
@@ -19,7 +20,7 @@ class Site extends React.Component {
 
     this.theme = createMuiTheme({
       typography: {
-        fontFamily: ['Open Sans', 'sans-serif'].join(","),
+        fontFamily: ["Open Sans", "sans-serif"].join(","),
       },
     });
 
@@ -83,9 +84,7 @@ class Site extends React.Component {
     return (
       <ThemeProvider theme={this.theme}>
         <div>
-          <div
-            ref={this.HOME}
-          ></div>
+          <div ref={this.HOME}></div>
           <TopBorder logo={logo} />
         </div>
         <NavigationCircle
@@ -94,56 +93,61 @@ class Site extends React.Component {
           handleScrollToo={this.handleScrollToo}
         />
         <div>
-          <Component
-            titleVariant="h6"
-            bodyVariant="body2"
-            title={["PEP - Power your electronics with your body"]}
-            body={[
-              "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
-            ]}
-            pic={white}
-            textClass="Component_text_black"
-            align="left"
-          />
-          <div
-            ref={this.PRODUCT}
-          ></div>
-          <Component
-            titleVariant="h6"
-            bodyVariant="body2"
-            title={[
-              "Charge together",
-              "Control temperature",
-              "Free electricity",
-            ]}
-            body={[
-              "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
-              "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
-              "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
-            ]}
-            pic={black}
-            textClass="Component_text_white"
-            align="right"
-          />
-
-          <div
-            ref={this.VISION}
-          ></div>
-          <ThreePicturesComponent PicOne={logo} PicTwo={logo} PicThree={logo} />
-          <div
-            ref={this.ABOUT_US}
-          ></div>
-          <Component
-            titleVariant="h6"
-            bodyVariant="body2"
-            title={["At LOOP we work for the future."]}
-            body={[
-              "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
-            ]}
-            pic={black}
-            textClass="Component_text_white"
-            align="right"
-          />
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={["PEP - Power your electronics with your body"]}
+              body={[
+                "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
+              ]}
+              pic={white}
+              textClass="Component_text_black"
+              align="left"
+            />
+          </Fade>
+          <div ref={this.PRODUCT}></div>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={[
+                "Charge together",
+                "Control temperature",
+                "Free electricity",
+              ]}
+              body={[
+                "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
+                "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
+                "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
+              ]}
+              pic={black}
+              textClass="Component_text_white"
+              align="right"
+            />
+          </Fade>
+          <div ref={this.VISION}></div>
+          <Fade big>
+            <ThreePicturesComponent
+              PicOne={logo}
+              PicTwo={logo}
+              PicThree={logo}
+            />
+          </Fade>
+          <div ref={this.ABOUT_US}></div>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={["At LOOP we work for the future."]}
+              body={[
+                "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
+              ]}
+              pic={black}
+              textClass="Component_text_white"
+              align="right"
+            />
+          </Fade>
         </div>
         <BottomBorder
           Logo={logo}

@@ -1,18 +1,22 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 
 function TopBorder(props) {
   return (
     <div>
       <Grid
         container
-        direction="row"
-        justify="center"
         alignItems="center"
         className="top_border"
       >
-        <Grid item alignContent="flex-start" justify="center">
-          <img src={props.logo} alt="Company logo" />
+        <Grid item xs={2} alignContent="center" justify="center">
+          <Box m={2}>
+            <img
+              style={{ width: "100%" }}
+              src={props.logo}
+              alt="Company logo"
+            />
+          </Box>
         </Grid>
         <Grid item xs={10}></Grid>
       </Grid>

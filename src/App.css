@@ -10,13 +10,13 @@
 }
 
 .top_border {
-  height: 166px;
+  height: 160px;
   width: 100%;
   background-color: var(--main);
 }
 
 .Bottom_border {
-  height: 166px;
+  height: 80px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -47,8 +47,9 @@
 }
 
 .circle {
-  width: 120px;
-  height: 120px;
+  z-index: 10000;
+  width: 128px;
+  height: 128px;
   line-height: 500px;
   border-radius: 50%;
   color: var(--main);
