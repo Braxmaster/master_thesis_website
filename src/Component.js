@@ -19,7 +19,7 @@ function Component(props) {
         <Grid
           item
           xs={12}
-          style={{ backgroundImage: `url(${props.pic})`, height: "60vh" }}
+          style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", height: "60vh", backgroundPosition: "center" }}
         ></Grid>
         <Grid
           container
@@ -63,7 +63,7 @@ function Component(props) {
         justify="center"
         alignItems="center"
         className="Component"
-        style={{ backgroundImage: `url(${props.pic})` }}
+        style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <Grid
           container
@@ -106,7 +106,7 @@ function Component(props) {
         justify="center"
         alignItems="center"
         className="Component"
-        style={{ backgroundImage: `url(${props.pic})` }}
+        style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <Grid item xs={6}></Grid>
         <Grid

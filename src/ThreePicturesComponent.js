@@ -9,15 +9,16 @@ function ThreePicturesComponent(props) {
         justify="center"
         alignItems="center"
         className="Component_grid"
+        style={{height: "100%"}}
       >
-        <Grid item xs={12} sm={4}>
-          <img src={props.PicOne} />
+        <Grid item xs={12} sm={4} style={{height: "100%", backgroundImage: `url(${props.PicOne})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <img src={props.PicTwo} />
+        <Grid item xs={12} sm={4} style={{height: "100%", backgroundImage: `url(${props.PicTwo})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <img src={props.PicThree} />
+        <Grid item xs={12} sm={4} style={{height: "100%", backgroundImage: `url(${props.PicThree})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+
         </Grid>
       </Grid>
     </div>

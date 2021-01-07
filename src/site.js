@@ -7,8 +7,18 @@ import BottomBorder from "./BottomBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
-
-import { black, white, logo } from "./pictures/img_exporter";
+import {
+  black,
+  white,
+  logo,
+  front_detail,
+  box_detail,
+  sholder_detail,
+  man_with_phone_white,
+  woman_with_phone_black,
+  charging_together,
+  pep_logo
+} from "./pictures/img_exporter";
 
 class Site extends React.Component {
   constructor(props) {
@@ -86,7 +96,7 @@ class Site extends React.Component {
       <ThemeProvider theme={this.theme}>
         <div>
           <div ref={this.HOME}></div>
-          <TopBorder logo={logo} />
+          <TopBorder logo={pep_logo} />
         </div>
         <NavigationCircle
           labels={this.state.labels}
@@ -102,7 +112,7 @@ class Site extends React.Component {
               body={[
                 "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
               ]}
-              pic={white}
+              pic={man_with_phone_white}
               textClass="Component_text_black"
               align="left"
             />
@@ -122,17 +132,43 @@ class Site extends React.Component {
                 "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
                 "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
               ]}
-              pic={black}
+              pic={woman_with_phone_black}
               textClass="Component_text_white"
               align="right"
             />
           </Fade>
-          <div ref={this.VISION}></div>
           <Fade big>
             <ThreePicturesComponent
-              PicOne={logo}
-              PicTwo={logo}
-              PicThree={logo}
+              PicOne={front_detail}
+              PicTwo={box_detail}
+              PicThree={sholder_detail}
+            />
+          </Fade>
+          <div ref={this.VISION}></div>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={["To a more enviornmentally friendly future"]}
+              body={[
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              ]}
+              pic={charging_together}
+              textClass="Component_text_white"
+              align="right"
+            />
+          </Fade>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={[
+                "INFOGRAPHIC SHOWING SOME KIND OF FLOW AND TOGETHERCHAGING",
+              ]}
+              body={[]}
+              pic={logo}
+              textClass="Component_text_white"
+              align="right"
             />
           </Fade>
           <div ref={this.ABOUT_US}></div>
