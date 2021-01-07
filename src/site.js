@@ -108,7 +108,7 @@ class Site extends React.Component {
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["PEP - Power your electronics with your body"]}
+              title={["PEP - Power your electronics with your body 🔋"]}
               body={[
                 "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
               ]}
@@ -123,9 +123,9 @@ class Site extends React.Component {
               titleVariant="h6"
               bodyVariant="body2"
               title={[
-                "Charge together",
-                "Control temperature",
-                "Free electricity",
+                "Charge together 🤝",
+                "Control temperature 🌡️",
+                "Free electricity ⚡",
               ]}
               body={[
                 "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
@@ -176,7 +176,7 @@ class Site extends React.Component {
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["At °Seebeck we work for the future."]}
+              title={["At °Seebeck we work for the future. 🤖"]}
               body={[
                 "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
               ]}
