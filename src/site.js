@@ -17,7 +17,8 @@ import {
   man_with_phone_white,
   woman_with_phone_black,
   charging_together,
-  pep_logo
+  pep_logo,
+  infographic,
 } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -85,7 +86,8 @@ class Site extends React.Component {
   }
 
   isInViewport(offset = 0, ref) {
-    offset = window.innerHeight * 0.7;
+    //offset = window.innerHeight * 0.7;
+    offset = 0;
     if (!ref) return false;
     const top = ref.current.getBoundingClientRect().top;
     return top + offset >= 0 && top - offset <= window.innerHeight;
@@ -144,29 +146,27 @@ class Site extends React.Component {
               PicThree={sholder_detail}
             />
           </Fade>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={[]}
+              body={[]}
+              pic={infographic}
+              textClass="Component_text_white"
+              align="right"
+            />
+          </Fade>
           <div ref={this.VISION}></div>
           <Fade big>
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["To a more enviornmentally friendly future"]}
+              title={["Inheritly social"]}
               body={[
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
               ]}
               pic={charging_together}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={[
-                "INFOGRAPHIC SHOWING SOME KIND OF FLOW AND TOGETHERCHAGING",
-              ]}
-              body={[]}
-              pic={logo}
               textClass="Component_text_white"
               align="right"
             />
