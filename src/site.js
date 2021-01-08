@@ -19,6 +19,7 @@ import {
   charging_together,
   pep_logo,
   infographic,
+  happy_town,
 } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -162,11 +163,22 @@ class Site extends React.Component {
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["Inheritly social"]}
+              title={["Inheritly social 🍃"]}
               body={[
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But thats just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more ecnoomic and with 100% green electricity.",
               ]}
               pic={charging_together}
+              textClass="Component_text_white"
+              align="right"
+            />
+          </Fade>
+          <Fade big>
+            <Component
+              titleVariant="h6"
+              bodyVariant="body2"
+              title={[]}
+              body={[]}
+              pic={happy_town}
               textClass="Component_text_white"
               align="right"
             />
@@ -176,7 +188,7 @@ class Site extends React.Component {
             <Component
               titleVariant="h6"
               bodyVariant="body2"
-              title={["At °Seebeck we work for the future. 🤖"]}
+              title={["At °Seebeck we work for the future 🤖"]}
               body={[
                 "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
               ]}
