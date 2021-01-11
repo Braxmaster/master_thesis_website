@@ -11,6 +11,8 @@ import nine from "./pep_logo.svg";
 import ten from "./infographic.png";
 import eleven from "./happy_town.png";
 import twelve from "./team.png";
+import thirteen from "./desert.jpg";
+import fourteen from "./ice.jpg";
 
 export const black = zero;
 export const white = one;
@@ -25,3 +27,5 @@ export const pep_logo = nine;
 export const infographic = ten;
 export const happy_town = eleven;
 export const team = twelve;
+export const desert = thirteen;
+export const ice_break = fourteen;

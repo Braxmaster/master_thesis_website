@@ -9,7 +9,7 @@ function TopBorder(props) {
         alignItems="center"
         className="top_border"
       >
-        <Grid item xs={6} sm={2} alignContent="center" justify="center">
+        <Grid item xs={6} sm={2}>
           <Box m={2}>
             <img
               style={{ width: "100%" }}

@@ -19,7 +19,12 @@ function Component(props) {
         <Grid
           item
           xs={12}
-          style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", height: "60vh", backgroundPosition: "center" }}
+          style={{
+            backgroundImage: `url(${props.pic})`,
+            backgroundSize: "cover",
+            height: "60vh",
+            backgroundPosition: "center",
+          }}
         ></Grid>
         <Grid
           container
@@ -31,7 +36,7 @@ function Component(props) {
         >
           {props.body.map(function (element, index) {
             return (
-              <Grid item>
+              <Grid item key={index}>
                 <Typography
                   variant={props.titleVariant}
                   align="left"
@@ -51,8 +56,7 @@ function Component(props) {
           })}
         </Grid>
         <Grid item xs={12}>
-          <Box m={4}>
-          </Box>
+          <Box m={4}></Box>
         </Grid>
       </Grid>
     );
@@ -63,20 +67,24 @@ function Component(props) {
         justify="center"
         alignItems="center"
         className="Component"
-        style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{
+          backgroundImage: `url(${props.pic})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <Grid
           container
-          xs={12}
-          sm={4}
           spacing={6}
           direction="column"
           justify="center"
           className="Component_text_box"
+          xs={12}
+          sm={4}
         >
           {props.body.map(function (element, index) {
             return (
-              <Grid item>
+              <Grid item key={index}>
                 <Typography
                   variant={props.titleVariant}
                   align="left"
@@ -106,7 +114,11 @@ function Component(props) {
         justify="center"
         alignItems="center"
         className="Component"
-        style={{ backgroundImage: `url(${props.pic})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{
+          backgroundImage: `url(${props.pic})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <Grid item xs={6}></Grid>
         <Grid
@@ -120,7 +132,7 @@ function Component(props) {
         >
           {props.body.map(function (element, index) {
             return (
-              <Grid item>
+              <Grid item key={index}>
                 <Typography
                   variant={props.titleVariant}
                   align="left"

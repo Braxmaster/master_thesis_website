@@ -22,6 +22,8 @@ import {
   infographic,
   happy_town,
   team,
+  desert,
+  ice_break
 } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -74,15 +76,15 @@ class Site extends React.Component {
   }
 
   handleScrollToElement(event) {
-    if (this.isInViewport(0, this.HOME)) {
+    if (this.isInViewport(window.innerHeight * 0.7, this.HOME)) {
       this.setState({ inView: [true, false, false, false] });
-    } else if (this.isInViewport(0, this.PRODUCT)) {
+    } else if (this.isInViewport(window.innerHeight * 1.4, this.PRODUCT)) {
       console.log("Product visible");
       this.setState({ inView: [false, true, false, false] });
-    } else if (this.isInViewport(0, this.VISION)) {
+    } else if (this.isInViewport(window.innerHeight * 1.4, this.VISION)) {
       console.log("Vision visible");
       this.setState({ inView: [false, false, true, false] });
-    } else if (this.isInViewport(0, this.ABOUT_US)) {
+    } else if (this.isInViewport(window.innerHeight * 0.7, this.ABOUT_US)) {
       console.log("About us visible");
       this.setState({ inView: [false, false, false, true] });
     }
@@ -90,7 +92,7 @@ class Site extends React.Component {
 
   isInViewport(offset = 0, ref) {
     //offset = window.innerHeight * 0.7;
-    offset = 0;
+    //offset = 0;
     if (!ref) return false;
     const top = ref.current.getBoundingClientRect().top;
     return top + offset >= 0 && top - offset <= window.innerHeight;
@@ -116,7 +118,7 @@ class Site extends React.Component {
                 <Component
                   titleVariant="h6"
                   bodyVariant="body2"
-                  title={["PEP - Power your electronics with your body 🔋"]}
+                  title={["Power from your body 🔋"]}
                   body={[
                     "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
                   ]}
@@ -141,7 +143,7 @@ class Site extends React.Component {
                     "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
                     "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
                   ]}
-                  pic={woman_with_phone_black}
+                  pic={charging_together}
                   textClass="Component_text_white"
                   align="right"
                 />
@@ -170,11 +172,24 @@ class Site extends React.Component {
                 <Component
                   titleVariant="h6"
                   bodyVariant="body2"
-                  title={["Inheritly social 🍃"]}
+                  title={["A future lacking in electricity 🔥"]}
                   body={[
-                    "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But thats just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more ecnoomic and with 100% green electricity.",
+                    "In a near future electricity will be much harder to come by. As we adapt towards more sustainable means of electricity production we will also end up with less and less electricity to power our devices. But can you imagine a life without the digital comforts of everyday life?",
                   ]}
-                  pic={charging_together}
+                  pic={ice_break}
+                  textClass="Component_text_black"
+                  align="left"
+                />
+              </Fade>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={["Power to the people 🔌"]}
+                  body={[
+                    "We believe that electricity is a human right, and that a life without the social comforts of a phone or a computer is not a life lived in full. By using a PEP device you will never go without electricity again. And you will be prepared for a future with less electricity to go around.",
+                  ]}
+                  pic={woman_with_phone_black}
                   textClass="Component_text_white"
                   align="right"
                 />
@@ -183,11 +198,13 @@ class Site extends React.Component {
                 <Component
                   titleVariant="h6"
                   bodyVariant="body2"
-                  title={[]}
-                  body={[]}
+                  title={["Inherently social 🧑‍🤝‍🧑"]}
+                  body={[
+                    "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But that's just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, moral economic and with 100% green electricity.",
+                  ]}
                   pic={happy_town}
-                  textClass="Component_text_white"
-                  align="right"
+                  textClass="Component_text_black"
+                  align="left"
                 />
               </Fade>
               <Box m={2}></Box>

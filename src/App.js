@@ -1,16 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import Site from './site'
+import Site from "./site";
 
 function App() {
   return (
     <div className="App">
-      <header>
-      </header>
-      <body>
-        <Site />
-      </body>
+      <Site />
     </div>
   );
 }

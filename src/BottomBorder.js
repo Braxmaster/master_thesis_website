@@ -17,7 +17,11 @@ function BottomBorder(props) {
             </Typography>
           </Box>
         </Grid>
-        <Grid item></Grid>
+        <Grid container alignItems="center" className="Bottom_border">
+          <Grid item>
+          <img src={props.facebook} />
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );

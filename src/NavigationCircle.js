@@ -3,7 +3,7 @@ import { Typography, Grid, Link } from "@material-ui/core";
 
 function NavigationCircle(props) {
   return (
-    <div class="circle">
+    <div className="circle">
       <Grid
         container
         direction="column"
@@ -15,7 +15,7 @@ function NavigationCircle(props) {
           <Grid item key={index}>
             <Typography variant="body2">
               <Link
-                underline={props.bold[index] ? "always" : "node"}
+                underline={props.bold[index] ? "always" : "none"}
                 color="inherit"
                 className="nav_item_in_circle"
                 onClick={() => props.handleScrollToo(label)}
