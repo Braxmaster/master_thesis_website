@@ -47,8 +47,8 @@
 
 .circle {
   z-index: 10000;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   line-height: 500px;
   border-radius: 50%;
   color: var(--main);

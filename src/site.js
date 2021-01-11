@@ -109,100 +109,105 @@ class Site extends React.Component {
           handleScrollToo={this.handleScrollToo}
         />
         <div>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={["PEP - Power your electronics with your body 🔋"]}
-              body={[
-                "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
-              ]}
-              pic={man_with_phone_white}
-              textClass="Component_text_black"
-              align="left"
-            />
-          </Fade>
-          <Box m={2}>
-          </Box>
-          <div ref={this.PRODUCT}></div>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={[
-                "Charge together 🤝",
-                "Control temperature 🌡️",
-                "Free electricity ⚡",
-              ]}
-              body={[
-                "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
-                "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
-                "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
-              ]}
-              pic={woman_with_phone_black}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
-          {/*         <Fade big>
+          <Grid container>
+            <Grid item sm={1}></Grid>
+            <Grid item sm={10}>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={["PEP - Power your electronics with your body 🔋"]}
+                  body={[
+                    "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
+                  ]}
+                  pic={man_with_phone_white}
+                  textClass="Component_text_black"
+                  align="left"
+                />
+              </Fade>
+              <Box m={2}></Box>
+              <div ref={this.PRODUCT}></div>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={[
+                    "Charge together 🤝",
+                    "Control temperature 🌡️",
+                    "Free electricity ⚡",
+                  ]}
+                  body={[
+                    "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
+                    "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
+                    "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
+                  ]}
+                  pic={woman_with_phone_black}
+                  textClass="Component_text_white"
+                  align="right"
+                />
+              </Fade>
+              {/*         <Fade big>
             <ThreePicturesComponent
               PicOne={front_detail}
               PicTwo={box_detail}
               PicThree={sholder_detail}
             />
 </Fade>*/}
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={[]}
-              body={[]}
-              pic={infographic}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
-          <Box m={2}></Box>
-          <div ref={this.VISION}></div>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={["Inheritly social 🍃"]}
-              body={[
-                "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But thats just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more ecnoomic and with 100% green electricity.",
-              ]}
-              pic={charging_together}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={[]}
-              body={[]}
-              pic={happy_town}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
-          <Box m={2}></Box>
-          <div ref={this.ABOUT_US}></div>
-          <Fade big>
-            <Component
-              titleVariant="h6"
-              bodyVariant="body2"
-              title={["At °Seebeck we work for the future 🤖"]}
-              body={[
-                "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
-              ]}
-              pic={team}
-              textClass="Component_text_white"
-              align="right"
-            />
-          </Fade>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={[]}
+                  body={[]}
+                  pic={infographic}
+                  textClass="Component_text_white"
+                  align="right"
+                />
+              </Fade>
+              <Box m={2}></Box>
+              <div ref={this.VISION}></div>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={["Inheritly social 🍃"]}
+                  body={[
+                    "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But thats just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more ecnoomic and with 100% green electricity.",
+                  ]}
+                  pic={charging_together}
+                  textClass="Component_text_white"
+                  align="right"
+                />
+              </Fade>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={[]}
+                  body={[]}
+                  pic={happy_town}
+                  textClass="Component_text_white"
+                  align="right"
+                />
+              </Fade>
+              <Box m={2}></Box>
+              <div ref={this.ABOUT_US}></div>
+              <Fade big>
+                <Component
+                  titleVariant="h6"
+                  bodyVariant="body2"
+                  title={["At °Seebeck we work for the future 🤖"]}
+                  body={[
+                    "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
+                  ]}
+                  pic={team}
+                  textClass="Component_text_white"
+                  align="right"
+                />
+              </Fade>
+            </Grid>
+            <Grid item sm={1}></Grid>
+          </Grid>
         </div>
         <BottomBorder
           Logo={logo}
