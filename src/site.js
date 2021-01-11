@@ -1,29 +1,24 @@
-import React, { useRef } from "react";
+import React from "react";
 import Component from "./Component";
 import NavigationCircle from "./NavigationCircle";
 import TopBorder from "./TopBorder";
-import ThreePicturesComponent from "./ThreePicturesComponent";
 import BottomBorder from "./BottomBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { Box, Typography, Grid } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
+import Faq from "./Faq";
 
 import {
-  black,
-  white,
   logo,
-  front_detail,
-  box_detail,
-  sholder_detail,
   man_with_phone_white,
-  woman_with_phone_black,
   charging_together,
   pep_logo,
   infographic,
   happy_town,
   team,
-  desert,
-  ice_break
+  ice_break,
+  two_people_charging,
+  woman_with_phone_to_side,
 } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -55,13 +50,13 @@ class Site extends React.Component {
   // THIS IS TERRIBLE, FORGIVE ME
   handleScrollToo(ref) {
     var scroll_to = null;
-    if (ref == "HOME") {
+    if (ref === "HOME") {
       scroll_to = this.HOME;
-    } else if (ref == "PRODUCT") {
+    } else if (ref === "PRODUCT") {
       scroll_to = this.PRODUCT;
-    } else if (ref == "VISION") {
+    } else if (ref === "VISION") {
       scroll_to = this.VISION;
-    } else if (ref == "ABOUT US") {
+    } else if (ref === "ABOUT US") {
       scroll_to = this.ABOUT_US;
     }
     scroll_to.current.scrollIntoView({ behavior: "smooth" });
@@ -79,13 +74,10 @@ class Site extends React.Component {
     if (this.isInViewport(window.innerHeight * 0.7, this.HOME)) {
       this.setState({ inView: [true, false, false, false] });
     } else if (this.isInViewport(window.innerHeight * 1.4, this.PRODUCT)) {
-      console.log("Product visible");
       this.setState({ inView: [false, true, false, false] });
-    } else if (this.isInViewport(window.innerHeight * 1.4, this.VISION)) {
-      console.log("Vision visible");
+    } else if (this.isInViewport(window.innerHeight * 2.1, this.VISION)) {
       this.setState({ inView: [false, false, true, false] });
     } else if (this.isInViewport(window.innerHeight * 0.7, this.ABOUT_US)) {
-      console.log("About us visible");
       this.setState({ inView: [false, false, false, true] });
     }
   }
@@ -120,7 +112,7 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["Power from your body 🔋"]}
                   body={[
-                    "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Your phone will only die if you do.",
+                    "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Can you live without you phone? With PEP you don’t have to - your phone will only die if you do.",
                   ]}
                   pic={man_with_phone_white}
                   textClass="Component_text_black"
@@ -139,9 +131,9 @@ class Site extends React.Component {
                     "Free electricity ⚡",
                   ]}
                   body={[
-                    "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilites.",
-                    "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP will harvest.",
-                    "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell itt back to the grid? You decide!",
+                    "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilities.",
+                    "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP is harvesting.",
+                    "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell it back to the grid? You decide!",
                   ]}
                   pic={charging_together}
                   textClass="Component_text_white"
@@ -189,8 +181,8 @@ class Site extends React.Component {
                   body={[
                     "We believe that electricity is a human right, and that a life without the social comforts of a phone or a computer is not a life lived in full. By using a PEP device you will never go without electricity again. And you will be prepared for a future with less electricity to go around.",
                   ]}
-                  pic={woman_with_phone_black}
-                  textClass="Component_text_white"
+                  pic={woman_with_phone_to_side}
+                  textClass="Component_text_black"
                   align="right"
                 />
               </Fade>
@@ -200,7 +192,7 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["Inherently social 🧑‍🤝‍🧑"]}
                   body={[
-                    "PEP is not a product it is a system and the more users the more power. By charging together humans can create beautiful things, and power more complex systems. But that's just the beginning. As more and more people join the PEP-collective the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, moral economic and with 100% green electricity.",
+                    "PEP is not a product - it is a system - and the more users the more power. By charging together, humans can create beautiful things and power more complex systems. But that's just the beginning. As more and more people join the PEP-collective, the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more economic and with 100% green electricity.",
                   ]}
                   pic={happy_town}
                   textClass="Component_text_black"
@@ -215,12 +207,16 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["At °Seebeck we work for the future 🤖"]}
                   body={[
-                    "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
+                    "We are a multidisciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentally aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
                   ]}
                   pic={team}
                   textClass="Component_text_white"
                   align="right"
                 />
+              </Fade>
+              <Box m={2}></Box>
+              <Fade big>
+                <Faq pic={two_people_charging} />
               </Fade>
             </Grid>
             <Grid item sm={1}></Grid>

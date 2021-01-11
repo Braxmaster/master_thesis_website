@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box, TextField, Button } from "@material-ui/core";
+import { Grid, Typography, Box} from "@material-ui/core";
 
 function BottomBorder(props) {
   return (
@@ -12,7 +12,7 @@ function BottomBorder(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box m={2}>
-            <Typography align="left" variant="body2">
+            <Typography className="Component_text_white" align="left" variant="body2">
               {props.Text}
             </Typography>
           </Box>

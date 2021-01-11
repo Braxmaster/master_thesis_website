@@ -18,6 +18,7 @@
 .Bottom_border {
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--secondary);
 }
 
 .bottom_border_logo {
