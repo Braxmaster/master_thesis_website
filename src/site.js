@@ -5,6 +5,7 @@ import TopBorder from "./TopBorder";
 import ThreePicturesComponent from "./ThreePicturesComponent";
 import BottomBorder from "./BottomBorder";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { Box, Typography, Grid } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 
 import {
@@ -20,6 +21,7 @@ import {
   pep_logo,
   infographic,
   happy_town,
+  team,
 } from "./pictures/img_exporter";
 
 class Site extends React.Component {
@@ -120,6 +122,8 @@ class Site extends React.Component {
               align="left"
             />
           </Fade>
+          <Box m={2}>
+          </Box>
           <div ref={this.PRODUCT}></div>
           <Fade big>
             <Component
@@ -140,13 +144,13 @@ class Site extends React.Component {
               align="right"
             />
           </Fade>
-          <Fade big>
+          {/*         <Fade big>
             <ThreePicturesComponent
               PicOne={front_detail}
               PicTwo={box_detail}
               PicThree={sholder_detail}
             />
-          </Fade>
+</Fade>*/}
           <Fade big>
             <Component
               titleVariant="h6"
@@ -158,6 +162,7 @@ class Site extends React.Component {
               align="right"
             />
           </Fade>
+          <Box m={2}></Box>
           <div ref={this.VISION}></div>
           <Fade big>
             <Component
@@ -183,6 +188,7 @@ class Site extends React.Component {
               align="right"
             />
           </Fade>
+          <Box m={2}></Box>
           <div ref={this.ABOUT_US}></div>
           <Fade big>
             <Component
@@ -192,7 +198,7 @@ class Site extends React.Component {
               body={[
                 "We are a multidiciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentaly aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
               ]}
-              pic={black}
+              pic={team}
               textClass="Component_text_white"
               align="right"
             />

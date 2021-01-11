@@ -9,7 +9,8 @@ import seven from "./woman_with_phone_black.png";
 import eight from "./charging_together.png";
 import nine from "./pep_logo.svg";
 import ten from "./infographic.png";
-import eleven from "./happy_town.png"
+import eleven from "./happy_town.png";
+import twelve from "./team.png";
 
 export const black = zero;
 export const white = one;
@@ -23,3 +24,4 @@ export const charging_together = eight;
 export const pep_logo = nine;
 export const infographic = ten;
 export const happy_town = eleven;
+export const team = twelve;
