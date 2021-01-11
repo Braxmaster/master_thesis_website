@@ -1,11 +1,20 @@
 import React from "react";
 import { Grid, Typography, Box, Divider } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function Faq(props) {
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
-    <Grid container alignContent="center" style={{ height: "90vh" }}>
-      <Grid item xs={1}></Grid>
-      <Grid item xs={6}>
+    <Grid
+      container
+      alignContent="center"
+      style={{ height: isSmall ? "90vh" : "90vh" }}
+    >
+      <Grid item xs={0} sm={1}></Grid>
+      <Grid item xs={12} sm={6}>
         <Grid container>
           <Box m={2}>
             <Typography variant="h5" align="left">
@@ -67,11 +76,22 @@ function Faq(props) {
           </Grid>
         </Box>
       </Grid>
-      <Grid item xs={4}>
-        <Box m={4}>
-          <img src={props.pic} style={{ width: "100%" }}></img>
-        </Box>
+      <Grid item xs={0} sm={4}>
+        {isSmall ? (
+          <div></div>
+        ) : (
+          <Box m={4}>
+            <img src={props.pic} style={{ width: "100%" }}></img>
+          </Box>
+        )}
       </Grid>
+      {isSmall ? (
+        <div></div>
+      ) : (
+        <Grid item xs={12}>
+          <Box m={4}></Box>
+        </Grid>
+      )}
     </Grid>
   );
 }
