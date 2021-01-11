@@ -43,7 +43,7 @@ function Faq(props) {
         <Box m={2}>
           <Grid item xs={12}>
             <Typography align="left" style={{ textDecoration: "underline" }}>
-              - Can I charge all my wearable technologies?
+              - Can I charge all my electronic devices?
             </Typography>
           </Grid>
           <Grid item xs={12}>

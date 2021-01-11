@@ -169,7 +169,7 @@ class Site extends React.Component {
                     "In a near future electricity will be much harder to come by. As we adapt towards more sustainable means of electricity production we will also end up with less and less electricity to power our devices. But can you imagine a life without the digital comforts of everyday life?",
                   ]}
                   pic={ice_break}
-                  textClass="Component_text_black"
+                  textClass="Component_text_white"
                   align="left"
                 />
               </Fade>
