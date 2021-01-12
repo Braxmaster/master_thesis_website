@@ -23,7 +23,8 @@ function Component(props) {
             backgroundImage: `url(${props.pic})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            height: "50vh",
+            backgroundPosition: "center",
+            height: "40vh",
           }}
         ></Grid>
         <Grid
