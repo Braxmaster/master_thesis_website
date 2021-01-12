@@ -40,24 +40,26 @@ function Faq(props) {
         <Box m={2}>
           <Grid item xs={12}>
             <Typography align="left" style={{ textDecoration: "underline" }}>
-              - What can a PEP charge?
+              - What devices can a PEP charge/power?
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body2" align="left">
-              Anything. And the more people the more fun!
+              Anything that has a USB-C port. And the more people the more
+              power!
             </Typography>
           </Grid>
         </Box>
         <Box m={2}>
           <Grid item xs={12}>
             <Typography align="left" style={{ textDecoration: "underline" }}>
-              - Can I charge all my electronic devices?
+              - How many devices can i charge at the same time?
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body2" align="left">
-              You can charge up to 6 devices/humans.
+              You can charge up to 6 devices/humans, its up to you how you want
+              to distribute your electricity.
             </Typography>
           </Grid>
         </Box>

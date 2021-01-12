@@ -110,7 +110,7 @@ class Site extends React.Component {
                 <Component
                   titleVariant="h6"
                   bodyVariant="body2"
-                  title={["Power from your body 🔋"]}
+                  title={["Power electronics with your body 🔋"]}
                   body={[
                     "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Can you live without you phone? With PEP you don’t have to - your phone will only die if you do.",
                   ]}
@@ -126,13 +126,13 @@ class Site extends React.Component {
                   titleVariant="h6"
                   bodyVariant="body2"
                   title={[
-                    "Charge together 🤝",
                     "Control temperature 🌡️",
+                    "Charge together 🤝",
                     "Free electricity ⚡",
                   ]}
                   body={[
+                    "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery lets you control how much of your body heat PEP is harvesting.",
                     "Electricity is more fun together. Connect your PEP with friends and family to charge each others power supply. Connected devices can also output more power, increasing possibilities.",
-                    "Take control of your body’s resources. For the first time ever you are in charge of the heat you produce. The body battery knob lets you control how much body heat your PEP is harvesting.",
                     "Why pay for electricity when you are making it for free? With the PEP you become an indie electricity producer in full control of your own power supply. Share it with friends? Sell it back to the grid? You decide!",
                   ]}
                   pic={charging_together}
@@ -166,7 +166,7 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["A future lacking in electricity 🔥"]}
                   body={[
-                    "In a near future electricity will be much harder to come by. As we adapt towards more sustainable means of electricity production we will also end up with less and less electricity to power our devices. But can you imagine a life without the digital comforts of everyday life?",
+                    "As we adapt towards more sustainable means of electricity production we will also end up with less and less electricity to power our devices. Thus, in a near future, electricity will be much harder to come by.  But can you imagine a life without the digital comforts of everyday life?",
                   ]}
                   pic={ice_break}
                   textClass="Component_text_white"
@@ -192,7 +192,7 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["Inherently social 🧑‍🤝‍🧑"]}
                   body={[
-                    "PEP is not a product - it is a system - and the more users the more power. By charging together, humans can create beautiful things and power more complex systems. But that's just the beginning. As more and more people join the PEP-collective, the amount of grass root electricity grows and make a positive impact towards a better tomorrow. Bring the power back to the people and live a life that is more social, more economic and with 100% green electricity.",
+                    "PEP is not a product - it is a system - and the more users the more power. By charging together, humans can create beautiful things and power more complex systems. But that's just the beginning. As more and more people join the PEP-collective, the amount of grass root electricity grows and make a positive impact towards a better tomorrow. With a PEP you live a life that is more social, more economic and with 100% green electricity.",
                   ]}
                   pic={happy_town}
                   textClass="Component_text_black"
@@ -210,7 +210,7 @@ class Site extends React.Component {
                     "We are a multidisciplinary think tank obsessed with innovation. With our feet firmly planted in reality and our eyes set on the future we develop socially and environmentally aware solutions for a better tomorrow. We believe that no system is set in stone and through technology and innovation we can change the world. We solve the problems of the future today.",
                   ]}
                   pic={team}
-                  textClass="Component_text_white"
+                  textClass="Component_text_black"
                   align="right"
                 />
               </Fade>

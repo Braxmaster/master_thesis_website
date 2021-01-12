@@ -21,9 +21,9 @@ function Component(props) {
           xs={12}
           style={{
             backgroundImage: `url(${props.pic})`,
-            backgroundSize: "cover",
-            height: "60vh",
-            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            height: "50vh",
           }}
         ></Grid>
         <Grid
