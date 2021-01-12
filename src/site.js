@@ -112,7 +112,7 @@ class Site extends React.Component {
                   bodyVariant="body2"
                   title={["Power electronics with your body 🔋"]}
                   body={[
-                    "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. Can you live without you phone? With PEP you don’t have to - your phone will only die if you do.",
+                    "Every second your body is radiating heat. This vast reserve of energy is wasted - until now. The PEP-device harvests this energy and makes it possible to power electronic devices with body heat. With it you will never go without electricity again. With PEP you don’t have to - your phone will only die if you do.",
                   ]}
                   pic={man_with_phone_white}
                   textClass="Component_text_black"
@@ -224,7 +224,7 @@ class Site extends React.Component {
         </div>
         <BottomBorder
           Logo={logo}
-          Text="We are currently in the last stages of prototyping and will be releasing the product soon. If you would like to recieve a notis when the PEP-device is on the market - do not hesitate to contact us."
+          Text="We are currently in the last stages of prototyping and will be releasing the product soon. If you would like to receive a notice when the PEP-device is on the market - do not hesitate to contact us."
         />
       </ThemeProvider>
     );
