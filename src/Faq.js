@@ -30,7 +30,7 @@ function Faq(props) {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body2" align="left">
-              How cold you get is completely up to yourself, you control this by
+              You may be. How cold you get is completely up to yourself, you control this by
               twisting the knob in the center of the body battery. A pro tip is
               to go for a run or do some exercises to build up extra body heat.
               Maybe avoid using it when you are sick.
